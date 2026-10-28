@@ -5,6 +5,10 @@ import './App.css';
 import SchoolsPage from './components/SchoolsPage';
 import OrdersPage from './components/OrdersPage';
 import SchedulesPage from './components/SchedulesPage';
+import StudentRecordsPage from './components/StudentRecordsPage';
+import PhotoVerificationPage from './components/PhotoVerificationPage';
+import ProductionBatchesPage from './components/ProductionBatchesPage';
+import ReprintsPage from './components/ReprintsPage';
 
 function App() {
   const [session, setSession] = useState(null);
@@ -448,7 +452,18 @@ if (session) {
   <OrdersPage userRole={profile?.role} />
 ) : activePage === 'Schedules' ? (
   <SchedulesPage userRole={profile?.role} />
+) : activePage === 'Student Records' ? (
+   <StudentRecordsPage userRole={profile?.role} />
+) : activePage === 'Photo Verification' ? (
+   <PhotoVerificationPage userRole={profile?.role} />
+) : activePage === 'Production Batches' ? (
+  <ProductionBatchesPage userRole={profile?.role} />
+) : activePage === 'Reprints' ? (
+  <ReprintsPage userRole={profile?.role} />
 ) : (
+
+
+  
   <section>
     <h2 className="dashboard-title">{activePage}</h2>
     <p className="dashboard-subtitle">
