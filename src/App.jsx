@@ -40,35 +40,35 @@ const navigationGroups = [
   {
     label: 'Overview',
     items: [
-      { name: 'Dashboard', icon: '▦' },
+      { name: 'Dashboard', icon: '' },
     ],
   },
   {
     label: 'Operations',
     items: [
-      { name: 'Schools & Clients', icon: '🏫' },
-      { name: 'Orders & Deadlines', icon: '📋' },
-      { name: 'Schedules', icon: '📅' },
+      { name: 'Schools & Clients', icon: '' },
+      { name: 'Orders & Deadlines', icon: '' },
+      { name: 'Schedules', icon: '' },
     ],
   },
   {
     label: 'Production',
     items: [
-      { name: 'Student Records', icon: '👥' },
-      { name: 'Photo Verification', icon: '📷' },
-      { name: 'Production Batches', icon: '🏭' },
-      { name: 'Reprints', icon: '🔄' },
-      { name: 'Endorsements', icon: '📦' },
+      { name: 'Student Records', icon: '' },
+      { name: 'Photo Verification', icon: '' },
+      { name: 'Production Batches', icon: '' },
+      { name: 'Reprints', icon: '' },
+      { name: 'Endorsements', icon: '' },
     ],
   },
   {
     label: 'Resources & Finance',
     items: [
-      { name: 'Inventory', icon: '📦' },
+      { name: 'Inventory', icon: '' },
       ...(profile?.role === 'owner' || profile?.role === 'accountant'
         ? [
-            { name: 'Invoices & Payments', icon: '₱' },
-            { name: 'Expenses & Reports', icon: '📈' },
+            { name: 'Invoices & Payments', icon: '' },
+            { name: 'Expenses & Reports', icon: '' },
           ]
         : []),
     ],
@@ -78,7 +78,7 @@ const navigationGroups = [
         {
           label: 'Administration',
           items: [
-            { name: 'User Management', icon: '⚙' },
+            { name: 'User Management', icon: '' },
           ],
         },
       ]

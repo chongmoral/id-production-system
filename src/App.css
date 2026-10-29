@@ -4557,3 +4557,434 @@
     padding: 15px;
   }
 }
+
+
+
+/* ==========================================================
+   ID PRODUCTION MANAGEMENT SYSTEM
+   Refined Theme: Slate, White & Teal
+   Append to the bottom of App.css
+   ========================================================== */
+
+:root {
+  --deep: #172b3a;
+  --deep-soft: #243f50;
+
+  --brand: #0f766e;
+  --brand-hover: #115e59;
+  --brand-soft: #e6f4f1;
+  --brand-ring: rgba(15, 118, 110, 0.18);
+
+  --canvas: #f4f7f9;
+  --surface: #ffffff;
+  --ink: #172b3a;
+  --muted: #64748b;
+  --faint: #94a3b8;
+
+  --line: #e2e8f0;
+  --line-strong: #cbd5e1;
+
+  --warn: #d97706;
+  --danger: #dc2626;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 2px 8px rgba(23, 43, 58, 0.04);
+}
+
+/* ---------- Global polish ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--brand-ring);
+  outline-offset: 2px;
+}
+
+/* ---------- Login page ---------- */
+
+.login-page {
+  background:
+    radial-gradient(
+      ellipse at 85% 10%,
+      rgba(15, 118, 110, 0.22),
+      transparent 45%
+    ),
+    linear-gradient(145deg, #172b3a, #203b4b 65%, #294b58);
+}
+
+.login-card {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(10, 28, 40, 0.24);
+}
+
+.login-logo {
+  background: var(--brand);
+  border-radius: 13px;
+  box-shadow: none;
+}
+
+.login-heading h2 {
+  color: #172b3a;
+  letter-spacing: -0.045em;
+}
+
+.login-card input {
+  min-height: 46px;
+  border-radius: 9px;
+}
+
+.login-card input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-ring);
+}
+
+.login-card button {
+  min-height: 46px;
+  border-radius: 9px;
+  box-shadow: none;
+}
+
+/* ---------- Top header ---------- */
+
+.dashboard-header {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 10px rgba(23, 43, 58, 0.025);
+}
+
+.logout-button {
+  border-radius: 9px;
+}
+
+.logout-button:hover:not(:disabled) {
+  color: var(--brand-hover);
+  background: var(--brand-soft);
+  border-color: #b7ded8;
+}
+
+/* ---------- Sidebar ---------- */
+
+.dashboard-sidebar {
+  background: var(--deep);
+  scrollbar-color: #496474 transparent;
+}
+
+.sidebar-label {
+  color: #a8bbc7;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 10px;
+}
+
+.sidebar-link {
+  border-radius: 9px;
+  color: #d0dce3;
+  font-weight: 500;
+}
+
+.sidebar-link:hover {
+  color: #ffffff;
+  background: #294555;
+}
+
+.sidebar-link.active {
+  color: #ffffff;
+  background: #0f766e;
+  box-shadow: none;
+  font-weight: 650;
+}
+
+.sidebar-link:focus-visible {
+  outline-color: #9ee4d9;
+}
+
+/* ---------- Main content ---------- */
+
+.dashboard-page {
+  background: var(--canvas);
+}
+
+.dashboard-content {
+  max-width: 1440px;
+  padding-top: 32px;
+}
+
+.dashboard-title {
+  color: var(--ink);
+  letter-spacing: -0.045em;
+}
+
+.dashboard-subtitle {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ---------- Dashboard metrics ---------- */
+
+.metric-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.metric-card:hover {
+  box-shadow: 0 8px 24px rgba(23, 43, 58, 0.07);
+  transform: translateY(-2px);
+}
+
+.metric-value {
+  color: var(--ink);
+  letter-spacing: -0.045em;
+}
+
+.metric-card:nth-child(2) .metric-label::before {
+  background: var(--brand);
+}
+
+.metric-card:nth-child(3) .metric-label::before {
+  background: var(--warn);
+}
+
+.metric-card:nth-child(4) .metric-label::before {
+  background: var(--danger);
+}
+
+/* ---------- Panels and cards ---------- */
+
+.dashboard-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-panel h3 {
+  color: var(--ink);
+}
+
+/* Common card styles used by management pages */
+
+.schools-page,
+.orders-page,
+.schedules-page,
+.inventory-page,
+.reprints-page,
+.endorsements-page,
+.users-page,
+.expenses-page,
+.invoices-page {
+  color: var(--ink);
+}
+
+.student-stat-card,
+.reprints-stat-card,
+.endorsements-stat-card,
+.inventory-stat-card,
+.users-stat-card,
+.expenses-stat-card,
+.invoices-stat-card,
+.student-form-card,
+.reprints-panel,
+.endorsements-panel,
+.inventory-panel,
+.users-panel,
+.expenses-panel,
+.invoices-panel {
+  border-color: var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Tables ---------- */
+
+.dashboard-content table {
+  border-color: var(--line);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.dashboard-content th {
+  color: #475569;
+  background: #f1f5f8;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.dashboard-content td {
+  color: #334155;
+}
+
+.dashboard-content tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.dashboard-content tbody tr:hover td {
+  background: #f5faf9;
+}
+
+/* ---------- Forms ---------- */
+
+.dashboard-content input:not([type="checkbox"]):not([type="radio"]),
+.dashboard-content select,
+.dashboard-content textarea {
+  border-color: var(--line-strong);
+  border-radius: 9px;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+.dashboard-content input:focus,
+.dashboard-content select:focus,
+.dashboard-content textarea:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-ring);
+}
+
+.dashboard-content input::placeholder,
+.dashboard-content textarea::placeholder {
+  color: #94a3b8;
+}
+
+.dashboard-content label {
+  color: #334155;
+}
+
+/* ---------- Primary buttons ---------- */
+
+.primary-button,
+.inventory-btn,
+.reprints-btn,
+.endorsements-btn,
+.users-btn,
+.student-btn {
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: var(--brand);
+  box-shadow: none;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: var(--brand-hover);
+}
+
+/* ---------- Status badges ---------- */
+
+.users-role,
+.reprints-status {
+  border-radius: 7px;
+  font-weight: 650;
+}
+
+.users-role-owner {
+  background: #f1eafe;
+  color: #6d28d9;
+}
+
+.users-role-production_staff {
+  background: #e8f1ff;
+  color: #1d4ed8;
+}
+
+.users-role-accountant {
+  background: #e0f5ec;
+  color: #166534;
+}
+
+.reprints-status-requested {
+  background: #fff4d6;
+  color: #92400e;
+}
+
+.reprints-status-approved {
+  background: #e8f1ff;
+  color: #1d4ed8;
+}
+
+.reprints-status-in_production {
+  background: #e9eaff;
+  color: #4338ca;
+}
+
+.reprints-status-completed {
+  background: #e0f5ec;
+  color: #166534;
+}
+
+.reprints-status-rejected {
+  background: #feecec;
+  color: #b91c1c;
+}
+
+/* ---------- Scrollbars ---------- */
+
+.dashboard-sidebar,
+.dashboard-content {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+/* ---------- Responsive spacing ---------- */
+
+@media (max-width: 760px) {
+  .dashboard-content {
+    padding: 24px 16px 36px;
+  }
+
+  .dashboard-title {
+    font-size: 26px;
+  }
+
+  .dashboard-panel {
+    padding: 18px;
+  }
+
+  .metric-card {
+    padding: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
