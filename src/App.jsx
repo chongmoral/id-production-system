@@ -9,6 +9,11 @@ import StudentRecordsPage from './components/StudentRecordsPage';
 import PhotoVerificationPage from './components/PhotoVerificationPage';
 import ProductionBatchesPage from './components/ProductionBatchesPage';
 import ReprintsPage from './components/ReprintsPage';
+import EndorsementsPage from './components/EndorsementsPage';
+import InventoryPage from './components/InventoryPage';
+import InvoicesPaymentsPage from './components/InvoicesPaymentsPage';
+import ExpensesReportsPage from './components/ExpensesReportsPage';
+import UserManagementPage from './components/UserManagementPage';
 
 function App() {
   const [session, setSession] = useState(null);
@@ -460,6 +465,16 @@ if (session) {
   <ProductionBatchesPage userRole={profile?.role} />
 ) : activePage === 'Reprints' ? (
   <ReprintsPage userRole={profile?.role} />
+)  : activePage === 'Endorsements' ? (
+    <EndorsementsPage userRole={profile?.role} />
+) : activePage === 'Inventory' ? (
+  <InventoryPage userRole={profile?.role} />
+) : activePage === 'Invoices & Payments' ? (
+  <InvoicesPaymentsPage userRole={profile?.role} />
+) : activePage === 'Expenses & Reports' ? (
+  <ExpensesReportsPage userRole={profile?.role} />
+  ) : activePage === 'User Management' ? (
+  <UserManagementPage userRole={profile?.role} />
 ) : (
 
 
